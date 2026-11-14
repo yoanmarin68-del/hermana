@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Felicitaciones, graduada 🎓</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background: linear-gradient(135deg, #171717, #302719, #111);
+  color: white;
+  min-height: 100vh;
+}
+
+.screen {
+  display: none;
+  min-height: 100vh;
+  padding: 25px 18px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.screen.active {
+  display: flex;
+}
+
+.gold {
+  color: #f5c75e;
+}
+
+.cap {
+  font-size: 85px;
+  animation: float 2s infinite ease-in-out;
+}
+
+@keyframes float {
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+h1 {
+  font-size: 35px;
+  color: #f5c75e;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #f5c75e;
+}
+
+p {
+  line-height: 1.7;
+}
+
+.open-button {
+  background: linear-gradient(135deg, #f5c75e, #c58c25);
+  color: #241b0c;
+  border: none;
+  border-radius: 30px;
+  padding: 16px 28px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  box-shadow: 0 5px 20px #d7a63855;
+}
+
+.open-button:active {
+  transform: scale(.95);
+}
+
+.card {
+  background: #fffaf0;
+  color: #302719;
+  padding: 28px 23px;
+  border-radius: 22px;
+  max-width: 520px;
+  width: 100%;
+  line-height: 1.85;
+  text-align: left;
+  box-shadow: 0 8px 35px #d8ad4b44;
+  animation: appear 1.5s ease;
+  border: 3px solid #d5ad51;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card h2 {
+  text-align: center;
+}
+
+.date {
+  text-align: center;
+  color: #a77a24;
+  font-weight: bold;
+}
+
+.final {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #a77a24;
+  margin-top: 25px;
+}
+
+.signature {
+  text-align: center;
+  font-weight: bold;
+}
+
+.confetti {
+  position: fixed;
+  top: -20px;
+  z-index: 10;
+  animation: fall 4s linear forwards;
+  pointer-events: none;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+.small {
+  color: #d9cba8;
+  font-size: 14px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- PANTALLA INICIAL -->
+<section class="screen active" id="home">
+
+  <div class="cap">🎓</div>
+
+  <h1>¡LO LOGRASTE!</h1>
+
+  <h2>Mi hermana, graduada de 11° ❤️</h2>
+
+  <p>
+    Hoy es un día muy especial.
+    <br>
+    Y tengo algo que quiero decirte...
+  </p>
+
+  <button class="open-button" onclick="celebrate()">
+    Descubrir mi sorpresa 💌
+  </button>
+
+  <p class="small">
+    Una sorpresa hecha con mucho cariño ♡
+  </p>
+
+</section>
+
+
+<!-- SEGUNDA PANTALLA -->
+<section class="screen" id="surprise">
+
+  <div class="cap">🥹🎓</div>
+
+  <h1>¡FELICIDADES!</h1>
+
+  <p>
+    No sabes lo orgulloso que estoy de ti.
+    <br>
+    Este logro es solo el comienzo de muchas cosas bonitas.
+  </p>
+
+  <button class="open-button" onclick="showLetter()">
+    Leer mi mensaje ❤️
+  </button>
+
+</section>
+
+
+<!-- CARTA -->
+<section class="screen" id="letter">
+
+  <div class="card">
+
+    <p class="date">🎓 Un día para recordar</p>
+
+    <h2>Para mi hermana, con mucho cariño ❤️</h2>
+
+    <p>
+      Hoy es un día que merece ser celebrado,
+      porque después de tantos esfuerzos,
+      aprendizajes y momentos vividos,
+      por fin llegaste a este momento tan bonito.
+    </p>
+
+    <p>
+      Quiero que sepas que estoy muy orgulloso de ti,
+      no solamente por este logro de graduarte de 11°,
+      sino también por la persona en la que te has
+      convertido.
+    </p>
+
+    <p>
+      Me alegra ver cómo has crecido, cómo has
+      aprendido de cada experiencia y cómo poco
+      a poco vas construyendo tu propio camino.
+      Tal vez no te lo diga siempre, pero admiro
+      mucho la persona que eres.
+    </p>
+
+    <p>
+      Sé que detrás de este día hay esfuerzos,
+      días difíciles, responsabilidades y muchas
+      cosas que quizás no todos conocen.
+      Por eso quiero que disfrutes muchísimo
+      este momento, porque te lo mereces.
+    </p>
+
+    <p>
+      Quiero que nunca dejes de luchar por tus sueños,
+      que no tengas miedo de empezar nuevos caminos
+      y que siempre recuerdes que eres capaz de
+      conseguir grandes cosas.
+    </p>
+
+    <p>
+      Hoy termina una etapa, pero comienza otra
+      llena de oportunidades. No sé qué te espera
+      en el futuro, pero deseo de corazón que
+      puedas cumplir cada uno de tus sueños.
+    </p>
+
+    <p>
+      Y aunque a veces no encuentre las palabras
+      para expresarlo, quiero que sepas que aquí
+      tienes a un hermano que te admira, te apoya
+      y siempre va a desear lo mejor para ti.
+    </p>
+
+    <div class="final">
+      Estoy muy orgulloso de ti.
+      <br>
+      ¡Esto apenas comienza! 🥇
+    </div>
+
+    <h2>¡FELIZ GRADUACIÓN! 🎓</h2>
+
+    <p class="signature">
+      Con mucho cariño,
+      <br>
+      Tu hermano ❤️
+    </p>
+
+  </div>
+
+</section>
+
+
+<script>
+
+function changeScreen(oldScreen, newScreen) {
+  document.getElementById(oldScreen)
+    .classList.remove("active");
+
+  document.getElementById(newScreen)
+    .classList.add("active");
+}
+
+function makeConfetti() {
+
+  const symbols = ["✨", "⭐", "🎓", "🥇", "💛"];
+
+  for (let i = 0; i < 55; i++) {
+
+    setTimeout(() => {
+
+      const item = document.createElement("div");
+
+      item.className = "confetti";
+      item.textContent =
+        symbols[Math.floor(Math.random() * symbols.length)];
+
+      item.style.left = Math.random() * 100 + "vw";
+      item.style.fontSize =
+        (15 + Math.random() * 20) + "px";
+
+      document.body.appendChild(item);
+
+      setTimeout(() => item.remove(), 4000);
+
+    }, i * 65);
+  }
+}
+
+function celebrate() {
+
+  changeScreen("home", "surprise");
+  makeConfetti();
+
+}
+
+function showLetter() {
+
+  changeScreen("surprise", "letter");
+  makeConfetti();
+
+}
+
+</script>
+
+</body>
+</html>
