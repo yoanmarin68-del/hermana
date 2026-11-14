@@ -12,7 +12,7 @@
 
 body {
   margin: 0;
-  font-family: 'Georgia', serif;
+  font-family: Georgia, serif;
   background: linear-gradient(135deg, #171717, #302719, #111);
   color: white;
   min-height: 100vh;
@@ -32,25 +32,18 @@ body {
   display: flex;
 }
 
-.gold {
-  color: #f5c75e;
-}
-
 .cap {
   font-size: 85px;
   animation: float 2s infinite ease-in-out;
 }
 
 @keyframes float {
-  50% {
-    transform: translateY(-12px);
-  }
+  50% { transform: translateY(-12px); }
 }
 
 h1 {
   font-size: 35px;
   color: #f5c75e;
-  margin-bottom: 10px;
 }
 
 h2 {
@@ -72,10 +65,6 @@ p {
   cursor: pointer;
   margin-top: 20px;
   box-shadow: 0 5px 20px #d7a63855;
-}
-
-.open-button:active {
-  transform: scale(.95);
 }
 
 .card {
@@ -176,7 +165,6 @@ p {
 
 </section>
 
-
 <!-- SEGUNDA PANTALLA -->
 <section class="screen" id="surprise">
 
@@ -195,7 +183,6 @@ p {
   </button>
 
 </section>
-
 
 <!-- CARTA -->
 <section class="screen" id="letter">
@@ -275,7 +262,6 @@ p {
 
 </section>
 
-
 <script>
 
 function changeScreen(oldScreen, newScreen) {
@@ -313,17 +299,13 @@ function makeConfetti() {
 }
 
 function celebrate() {
-
   changeScreen("home", "surprise");
   makeConfetti();
-
 }
 
 function showLetter() {
-
   changeScreen("surprise", "letter");
   makeConfetti();
-
 }
 
 </script>
